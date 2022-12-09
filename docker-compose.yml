@@ -13,9 +13,7 @@ services:
     volumes:
       - /data/copsi/config:/usr/local/apache2/htdocs/assets/config
       # uncomment the following line in case of deployment without proxy
-      - /data/copsi/html/index.html:/usr/local/apache2/htdocs/index.html    
-      # uncomment the following line in case of CSC OData service deployed on a different domain (not for production)
-      - /data/copsi/proxy:/usr/local/apache2/htdocs/assets/proxy 
+      #- /data/copsi/html/index.html:/usr/local/apache2/htdocs/index.html    
 
 networks:
     copsi:

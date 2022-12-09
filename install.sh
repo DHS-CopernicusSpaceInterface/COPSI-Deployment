@@ -9,7 +9,7 @@ echo "  ************************************************************************
 export version=$1
 
 if [ -z "$1" ]; then
-    echo "[WARNING] No verions supplied: setting default value to SNAPSHOT"
+    echo "[WARNING] No version supplied: setting default value to SNAPSHOT"
     version="SNAPSHOT"
 fi
 
