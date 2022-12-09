@@ -1,0 +1,26 @@
+version: "3.1"
+services:
+  copsi:
+    image: "aliaspace/copsi:1.0.0-SNAPSHOT"
+    container_name: copsi
+    hostname: copsi
+    restart: always
+    build: .
+    ports:
+      - "8090:80"
+    networks:
+      - copsi
+    volumes:
+      - /data/copsi/config:/usr/local/apache2/htdocs/assets/config
+      # uncomment the following line in case of deployment without proxy
+      - /data/copsi/html/index.html:/usr/local/apache2/htdocs/index.html    
+      # uncomment the following line in case of CSC OData service deployed on a different domain (not for production)
+      - /data/copsi/proxy:/usr/local/apache2/htdocs/assets/proxy 
+
+networks:
+    copsi:
+      driver: bridge
+      ipam:
+        driver: default
+        config:
+          - subnet: 172.16.0.0/16
