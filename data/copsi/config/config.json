@@ -50,20 +50,126 @@
         { "link": "https://www.serco.com/", "image": "./assets/images/logo-serco-grey_cut.png", "title": "Visit Serco website", "alt": "Serco logo"  },
         { "link": "http://www.alia-space.com/", "image": "./assets/images/logo_alia_white.png", "title": "Visit Alia website", "alt": "Alia Space logo"  }
     ],
-    "tags": [
+    "platformList": [
       {
-        "name": "productType",
-        "color": "#ff6400",
-        "title": "Product Type"
+        "name": "SENTINEL-1",
+        "tags": [
+          {
+            "name": "productType",
+            "color": "#ff6400",
+            "title": "Product Type"
+          },
+          {
+            "name": "operationalMode",
+            "color": "#A64253",
+            "title": "Operational Mode"
+          },
+          {
+            "name": "polarisationChannels",
+            "color": "#0CCE6B",
+            "title": "Polarization"
+          },
+          {
+            "name": "orbitNumber",
+            "color": "#3b0d11",
+            "title": "Orbit Number"
+          },
+          {
+            "name": "timeliness",
+            "color": "#C47AC0",
+            "title": "Timeliness"
+          }
+        ]
       },
       {
-        "name": "tileId",
-        "color": "#6400ff",
-        "title": "Tile Identifier"
+        "name": "SENTINEL-2",
+        "tags": [
+          {
+            "name": "productType",
+            "color": "#ff6400",
+            "title": "Product Type"
+          },        
+          {
+            "name": "cloudCover",
+            "color": "#ff006e",
+            "title": "Cloud Cover Percentage"
+          },
+          {
+            "name": "tileId",
+            "color": "#6400ff",
+            "title": "Tile Identifier"
+          },
+          {
+            "name": "orbitNumber",
+            "color": "#3b0d11",
+            "title": "Orbit Number"
+          },
+          {
+            "name": "datastripId",
+            "color": "#FF715B",
+            "title": "Datastrip Identifier"
+          }
+        ]
+      },
+      {
+        "name": "SENTINEL-3",
+        "tags": [
+          {
+            "name": "productType",
+            "color": "#ff6400",
+            "title": "Product Type"
+          },
+          {
+            "name": "orbitNumber",
+            "color": "#3b0d11",
+            "title": "Orbit Number"
+          },
+          {
+            "name": "relativeOrbitNumber",
+            "color": "#48a9a6",
+            "title": "Relative Orbit Number"
+          },
+          {
+            "name": "timeliness",
+            "color": "#C47AC0",
+            "title": "Timeliness"
+          },
+          {
+            "name": "instrumentShortName",
+            "color": "#4B9CE7",
+            "title": "Instrument"
+          }
+        ]
+      },
+      {
+        "name": "SENTINEL-5",
+        "tags": [
+          {
+            "name": "productType",
+            "color": "#ff6400",
+            "title": "Product Type"
+          },
+          {
+            "name": "processingMode",
+            "color": "#5B486A",
+            "title": "Processing Mode"
+          },
+          {
+            "name": "orbitNumber",
+            "color": "#3b0d11",
+            "title": "Orbit Number"
+          },
+          {
+            "name": "processingLevel",
+            "color": "#E71D36",
+            "title": "Processing Level"
+          }
+        ]
       }
     ],
     "footprints": {
-      "defaultColor": "#ff640096"
+      "defaultColor": "#ff640096",
+      "highlightedColor": "#00aeefcc"
     },
     "styles": [
         {
@@ -91,5 +197,5 @@
           "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/{z}/{y}/{x}.jpg"
         }
       ]
-    
+
 }
