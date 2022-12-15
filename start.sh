@@ -8,6 +8,8 @@ echo "  ************************************************************************
 
 echo "  Starting COPSI..."
 
+docker-compose pull
+
 docker-compose up -d
 
 return_code=$?
