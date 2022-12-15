@@ -15,7 +15,7 @@ services:
       # uncomment the following line in case of deployment without proxy
       #- /data/copsi/html/index.html:/usr/local/apache2/htdocs/index.html    
       # uncomment the following line for customizing the COPSI header
-      #- /data/copsi/images/logo.png:/usr/local/apache2/htdocs/assets/image/logo.png   
+      #- /data/copsi/images/logo.png:/usr/local/apache2/htdocs/assets/images/logo.png   
 
 networks:
     copsi:
