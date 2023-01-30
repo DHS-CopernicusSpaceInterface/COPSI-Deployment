@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "centreInfo": {
         "name": "",
         "image": "",
@@ -168,9 +168,12 @@
       }
     ],
     "footprints": {
-      "defaultColor": "#ff640056",
-      "borderColor": "#000000",
-      "highlightedColor": "#00aeefcc"
+      "defaultColor": "#ff640070",
+      "defaultBorderColor": "#882200dd",
+      "defaultBorderWidth": 2,
+      "selectedColor": "#00aeefaa",
+      "selectedBorderColor": "#0044eecc",
+      "selectedBorderWidth": 3
     },
     "styles": [
         {
@@ -180,7 +183,7 @@
         {
           "name": "OSM",
           "url": "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        },        
+        },
         {
           "name": "Terrain Light",
           "url": "https://tiles.maps.eox.at/wmts/1.0.0/terrain-light_3857/default/g/{z}/{y}/{x}.jpg"
