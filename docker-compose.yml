@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   copsi:
-    image: "collaborativedhs/copsi:1.1.2"
+    image: "collaborativedhs/copsi:2.0.0"
     container_name: copsi
     hostname: copsi
     restart: always
@@ -11,7 +11,7 @@ services:
       - copsi
     volumes:
       - /data/copsi/config:/usr/local/apache2/htdocs/assets/config
-      # uncomment the following line in case of deployment without proxy
+      # uncomment the following line in case you need to change the base href (default: copsi)
       #- /data/copsi/html/index.html:/usr/local/apache2/htdocs/index.html    
 
 networks:
