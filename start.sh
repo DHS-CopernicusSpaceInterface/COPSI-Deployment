@@ -8,9 +8,9 @@ echo "  ************************************************************************
 
 echo "  Starting COPSI..."
 
-docker-compose pull
+docker-compose pull || { echo "docker-compose command not found. Trying with docker compose instead.."; docker compose pull; }
 
-docker-compose up -d
+docker-compose up -d || { echo "docker-compose command not found. Trying with docker compose instead.."; docker compose up -d; }
 
 return_code=$?
 

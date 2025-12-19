@@ -14,7 +14,7 @@ if [ -z "$1" ]; then
 fi
 
 echo "Shutting down COPSI..."
-docker-compose down
+docker-compose down || { echo "docker-compose command not found. Trying with docker compose instead.."; docker compose down; }
 
 echo "COPSI stopped"
 
@@ -38,6 +38,6 @@ echo "cp -R data/copsi/* /data/copsi_${version}/"
 cp -R data/copsi/* /data/copsi_${version}/
 
 echo "Pull images..."
-docker-compose pull
+docker-compose pull || { echo "docker-compose command not found. Trying with docker compose instead.."; docker compose pull; }
 
 echo "COPSI environment ready!"

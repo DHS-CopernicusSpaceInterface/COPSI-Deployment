@@ -8,7 +8,7 @@ echo "  ************************************************************************
 
 echo "  Shutting down COPSI..."
 
-docker-compose down
+docker-compose down || { echo "docker-compose command not found. Trying with docker compose instead.."; docker compose down; }
 
 return_code=$?
 
