@@ -1,5 +1,5 @@
 {
-  "version": "4.0.1",
+  "version": "4.1.1",
   "centreInfo": {
       "name": "",
       "image": "",
@@ -8,8 +8,8 @@
       "title": ""
   },
   "baseUrl": "/copsi/",
-  "serviceUrl": "http(s)://<domain>/<api_context>/",
-  "serviceUrlStac": "http(s)://<domain>/<api_context>/",
+  "serviceUrl": "http(s)://<domain>/<api_context>",
+  "serviceUrlStac": "http(s)://<domain>/<api_context>",
   "odataVersion": "v2",
   "keycloak": {
       "issuer": "https://<keycloak_url>/auth/realms/<realm>",
@@ -17,7 +17,7 @@
       "changePasswordUrl": "<issuer>/account/?referrer=<clientId>#/security/signingin",
       "clientId": "<client_id>",
       "responseType": "code",
-      "scope": "openid profile email",
+      "scope": "openid profile email offline_access",
       "requireHttps": false,
       "showDebugInformation": false,
       "disableAtHashCheck": true,
@@ -29,11 +29,13 @@
     "orderByOptions": [
       {
         "name": "Publication Date",
-        "value": "PublicationDate"
+        "value": "PublicationDate",
+        "stacValue": "properties.published"
       },
       {
         "name": "Sensing Date",
-        "value": "ContentDate/Start"
+        "value": "ContentDate/Start",
+        "stacValue": "properties.datetime"
       }
     ],
     "sortByOptions": [
@@ -64,9 +66,9 @@
       "initialViewState": {
         "longitude": 2.27,
         "latitude": 38.86,
-        "zoom": 1.7,
-        "minZoom": 1.2,
-        "maxZoom": 10
+        "zoom": 3.0,
+        "minZoom": 2.5,
+        "maxZoom": 12
       },
       "projection": "globe"
   },
@@ -85,7 +87,7 @@
       "text": "Please Sign in to access our service",
       "buttonText": "Sign in"
   },
-  "quicklookURL": "<base_url>/odata/v1/Products(<uuid>)/AttachedFiles('quick-look.jpg')/$value",
+  "quicklookURL": "<base_url>/odata/<odata_version>/Products(<uuid>)/AttachedFiles('quick-look.jpg')/$value",
   "quicklookURLStac": "<base_url>/stac/download/quicklook/<productName>",
   "infoLogosLeft": [
       { "link": "https://www.esa.int/", "image": "./assets/images/ESA_logo_2020_White_cut.png", "title": "Visit ESA website", "alt": "ESA logo" },

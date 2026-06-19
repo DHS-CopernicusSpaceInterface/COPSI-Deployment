@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   copsi:
-    image: "collaborativedhs/copsi:4.0.1"
+    image: "collaborativedhs/copsi:4.1.1"
     container_name: copsi
     hostname: copsi
     restart: always
